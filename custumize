@@ -1,0 +1,10 @@
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+function wcc_change_breadcrumb_home_text( $defaults ) {
+	$defaults['delimiter']   = ' &#47; ';
+	$defaults['wrap_before'] = '<nav class="breadcrumbs">';
+	$defaults['wrap_after']  = '</nav>';
+	$defaults['home'] = 'img';
+	return $defaults;
+}
