@@ -8,3 +8,5 @@ function wcc_change_breadcrumb_home_text( $defaults ) {
 	$defaults['home'] = 'img';
 	return $defaults;
 }
+
+<?php woocommerce_breadcrumb(); ?>
